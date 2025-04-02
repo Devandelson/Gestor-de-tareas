@@ -1,0 +1,144 @@
+.ventana_registro{
+    width: 100%;
+    height: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.336);
+    z-index: 2;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 400ms ease;
+    overflow: hidden;
+    
+    opacity: 0;
+    filter: blur(10px);
+    pointer-events: none;
+
+    > span{
+        color: white;
+        position: absolute;
+        content: "";
+        display: block;
+        z-index: 2;
+        text-shadow: 0px 0px 10px black;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        transition: all 100ms ease;
+    }
+
+    > .formulario{
+        width: 100%;
+        max-width: 800px;
+        height: 0%;
+        position: relative;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        display: grid;
+        overflow-y: auto;
+        grid-template-rows: auto auto minmax(auto, 1fr) auto auto;
+        transition: all 400ms ease;
+
+        opacity: 0;
+        filter: blur(10px);
+        pointer-events: none;
+
+        hr{
+            width: 100%;
+            border: none;
+            background: #1B227D;
+            height: 3px;
+            border-radius: 10px;
+        }
+
+        .input1{
+            color: black;
+        }
+
+        > #title_ventana{
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
+
+        > .casillas{
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            > h3{
+                font-size: 25px;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+            }
+
+            > .subcontenedor_casillas{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-top: 10px;
+
+                > .input1{
+                    width: 100%;
+                    display: block;
+                    flex-grow: 1;
+                    position: relative;
+                    font-size: 18px;
+                    max-width: 350px;
+                    height: max-content;
+                    padding: 5px;
+                    border-radius: 3px;
+
+                    &::placeholder{
+                        color: black;
+                    }
+                }
+
+                > textarea{
+                    resize: none;
+                    height: 300px;
+                }
+            }
+        }
+
+        .controles{
+            width: 100%;
+            margin-top: 10px;
+
+            > button{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.ventana_registro_active{
+    height: 100vh!important;
+    opacity: 1!important;
+    filter: blur(0px)!important;
+    pointer-events: initial!important;
+
+    > .formulario{
+        height: 100%!important;
+        opacity: 1!important;
+        filter: blur(0px)!important;
+        pointer-events: initial!important;
+    }
+}

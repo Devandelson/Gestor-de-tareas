@@ -1,0 +1,104 @@
+header{
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    > .top{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        color: white;
+        background: #1B227D;
+        padding: 10px;
+
+        > .logo{
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            > img{
+                width: 50px;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+
+            > h1{
+                font-size: 35px;
+            }
+        }
+
+        > .account{
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            > img{
+                width: 40px;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+
+            > h3{
+                font-size: 25px;
+            }
+        }
+    }
+
+    > .bottom{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background: #343DA2;
+        padding: 10px;
+
+        > span{
+            content: "";
+            display: block;
+            padding: 10px;
+            color: black;
+            background: white;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            width: max-content;
+            transition: all 100ms ease;
+            font-size: 19px;
+        }
+
+        > input{
+            background: transparent;
+            box-shadow: inset 0px 0px 0px 2px white;
+            font-size: 18px;
+            height: 100%;
+            flex-grow: 1;
+            width: 100%;
+            border-top-right-radius: 5px;
+            padding: 10px;
+            border-bottom-right-radius: 5px;
+            transition: all 100ms ease;
+            outline: none;
+            border: none;
+            color: white;
+            
+            &::placeholder{
+                color: white;
+            }
+        }
+
+        &:has(> input:focus){
+            > span{
+                background: rgb(116, 26, 26);
+                color: white;
+                font-size: 20px;
+            }
+
+            > input{
+                border-color: rgb(116, 26, 26);
+                font-size: 21px;
+                box-shadow: inset 0px 0px 10px rgb(29, 1, 1);
+            }
+        }
+    }
+}
